@@ -117,11 +117,40 @@ footer{background:var(--darker);padding:64px 40px 32px;color:rgba(255,255,255,.6
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
+/* ── HAMBURGER ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:300}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .25s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(255,255,255,0.98);border-bottom:2px solid var(--border);backdrop-filter:blur(16px);z-index:199;padding:16px 24px 28px;flex-direction:column;gap:0;box-shadow:0 8px 32px rgba(113,76,154,.12)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text);text-decoration:none;font-size:16px;font-weight:500;padding:14px 0;border-bottom:1px solid var(--border);transition:color .2s}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--purple)}
+.mobile-menu .mobile-cta{margin-top:16px;background:var(--purple);color:white;text-align:center;padding:14px;border-radius:10px;font-weight:700;font-size:15px;border-bottom:none;display:block}
+.mobile-menu .mobile-cta:hover{background:var(--purple-dark);color:white}
+
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   nav{padding:0 20px}
   .nav-links{display:none}
+  .nav-actions{display:none}
+  .hamburger{display:flex}
   .page-hero{padding:60px 20px}
-  .footer-inner{grid-template-columns:1fr 1fr}
+  .page-hero h1{font-size:clamp(28px,8vw,48px)}
+  .page-hero p{font-size:16px}
+  .page-hero-ctas{flex-direction:column;gap:12px}
+  .page-hero-ctas a{width:100%;justify-content:center}
   .breadcrumb{padding:12px 20px}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:32px}
+  .section-sub{font-size:16px;margin-bottom:32px}
+  .cta-actions{flex-direction:column;align-items:center}
+  .cta-actions a{width:100%;max-width:320px;justify-content:center}
+}
+@media(max-width:600px){
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .btn-primary-lg,.btn-outline-lg,.btn-white,.btn-outline-white{font-size:15px;padding:13px 24px}
 }
