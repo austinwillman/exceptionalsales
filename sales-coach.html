@@ -287,38 +287,19 @@ window.addEventListener('load',function(){
     </div>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function toggleFaq(btn){
-  const item=btn.closest('.faq-item');
-  const isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-  open');
+  var item=btn.closest('.faq-item');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if(!isOpen)item.classList.add('open');
 }
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, {threshold:0.1});
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-// Hamburger toggle
-function toggleMenu(){
-  const m = document.getElementById('mobileMenu');
-  const b = document.getElementById('hamburger');
-  if(!m || !b) return;
-  m.classList.toggle('open');
-  b.classList.toggle('open');
+if('IntersectionObserver' in window){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:0.1});
+  window.addEventListener('load',function(){document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});});
 }
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.mobile-menu a').forEach(function(a){
-    a.addEventListener('click', function(){
-      const m = document.getElementById('mobileMenu');
-      const b = document.getElementById('hamburger');
-      if(m) m.classList.remove('open');
-      if(b) b.classList.remove('open');
-    });
-  });
-});
 </script>
 </body>
 </html>
