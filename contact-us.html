@@ -235,4 +235,32 @@
     </div>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scr
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, {threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Hamburger toggle
+function toggleMenu(){
+  const m = document.getElementById('mobileMenu');
+  const b = document.getElementById('hamburger');
+  if(!m || !b) return;
+  m.classList.toggle('open');
+  b.classList.toggle('open');
+}
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      const m = document.getElementById('mobileMenu');
+      const b = document.getElementById('hamburger');
+      if(m) m.classList.remove('open');
+      if(b) b.classList.remove('open');
+    });
+  });
+});
+</script>
+</body>
+</html>
