@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connie Kadansky | #1 Expert in Sales Call Reluctance | Exceptional Sales</title>
+<meta name="description" content="Identify which of the 16 types of Sales Call Reluctance is killing your pipeline. 25+ years, 1,200+ salespeople transformed. Take the free quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #714c9a;
+    --purple-dark: #5a3a7e;
+    --purple-light: #9b6ec8;
+    --purple-xlight: #e8ddf4;
+    --blue-accent: #543cdf;
+    --gold: #d4a843;
+    --gold-light: #f0c96e;
+    --dark: #1a1025;
+    --darker: #110d1a;
+    --text: #2d2040;
+    --text-muted: #6b5d7e;
+    --white: #ffffff;
+    --off-white: #f9f6fd;
+    --border: rgba(113, 76, 154, 0.15);
+    --shadow: 0 4px 40px rgba(113, 76, 154, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo img { height: 44px; width: auto; }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--text); text-decoration: none;
+    font-size: 15px; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--purple); }
+
+  .nav-actions { display: flex; align-items: center; gap: 12px; }
+
+  .btn-ghost {
+    background: none; border: none; cursor: pointer;
+    color: var(--text); font-family: inherit;
+    font-size: 14px; font-weight: 500;
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 4px;
+    text-decoration: none;
+  }
+  .btn-ghost:hover { color: var(--purple); }
+
+  .btn-primary {
+    background: var(--purple);
+    color: white; border: none; cursor: pointer;
+    font-family: inherit; font-size: 14px; font-weight: 600;
+    padding: 10px 20px; border-radius: 8px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .btn-primary:hover { background: var(--purple-dark); transform: translateY(-1px); }
+
+  .btn-primary-lg {
+    background: var(--purple);
+    color: white; border: none; cursor: pointer;
+    font-family: inherit; font-size: 16px; font-weight: 600;
+    padding: 16px 32px; border-radius: 10px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(113, 76, 154, 0.4);
+  }
+  .btn-primary-lg:hover {
+    background: var(--purple-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(113, 76, 154, 0.5);
+  }
+
+  .btn-outline-lg {
+    background: transparent;
+    color: var(--purple); border: 2px solid var(--purple);
+    cursor: pointer; font-family: inherit; font-size: 16px; font-weight: 600;
+    padding: 14px 32px; border-radius: 10px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    transition: all 0.2s;
+  }
+  .btn-outline-lg:hover { background: var(--purple); color: white; transform: translateY(-2px); }
+
+  /* HERO */
+  .hero {
+    margin-top: 72px;
+    background: linear-gradient(135deg, var(--darker) 0%, #2a1540 50%, #1e0f30 100%);
+    position: relative; overflow: hidden;
+    min-height: 85vh;
+    display: flex; align-items: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(113,76,154,0.25) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 20% 80%, rgba(84,60,223,0.15) 0%, transparent 60%);
+  }
+
+  /* subtle grid texture */
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 1200px; margin: 0 auto;
+    padding: 80px 40px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(113,76,154,0.25);
+    border: 1px solid rgba(113,76,154,0.5);
+    color: var(--purple-light);
+    font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .hero-badge span { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .hero-headline em {
+    font-style: normal;
+    color: var(--gold-light);
+  }
+
+  .hero-quote {
+    font-size: 17px; font-weight: 400;
+    color: rgba(255,255,255,0.75);
+    border-left: 3px solid var(--purple-light);
+    padding-left: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 17px; font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 36px;
+    line-height: 1.65;
+  }
+
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+  .hero-quiz-note {
+    font-size: 13px; color: rgba(255,255,255,0.45);
+    margin-top: 14px;
+  }
+
+  .hero-img-wrap {
+    position: relative;
+    display: flex; justify-content: center;
+  }
+  .hero-img-wrap::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(113,76,154,0.4) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(40px);
+  }
+  .hero-img {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 440px;
+    border-radius: 20px;
+    object-fit: cover;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.4));
+  }
+
+  /* floating credential cards */
+  .hero-cred {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 10px 16px;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 2;
+    white-space: nowrap;
+  }
+  .hero-cred-top { top: 40px; right: -10px; }
+  .hero-cred-bottom { bottom: 60px; left: -10px; }
+  .hero-cred strong { display: block; font-size: 18px; font-weight: 700; color: var(--gold-light); }
+
+  /* FEATURED IN */
+  .featured-bar {
+    background: var(--off-white);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 40px;
+  }
+  .featured-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; gap: 40px;
+  }
+  .featured-label {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-muted);
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .featured-logos {
+    display: flex; align-items: center; gap: 32px;
+    flex-wrap: wrap;
+  }
+  .featured-logos img {
+    height: 28px; width: auto;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: opacity 0.2s, filter 0.2s;
+  }
+  .featured-logos img:hover { opacity: 1; filter: grayscale(0%); }
+
+  /* PAIN SECTION */
+  .pain {
+    padding: 100px 40px;
+    background: var(--white);
+  }
+  .pain-inner { max-width: 1200px; margin: 0 auto; }
+
+  .section-eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--purple); margin-bottom: 12px;
+  }
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700; line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .section-heading em { font-style: normal; color: var(--purple); }
+  .section-sub {
+    font-size: 18px; color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 60px;
+  }
+
+  .pain-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .pain-card {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .pain-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .pain-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--purple), var(--blue-accent));
+  }
+  .pain-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+  .pain-card h3 {
+    font-size: 17px; font-weight: 600; margin-bottom: 8px;
+    color: var(--text);
+  }
+  .pain-card p {
+    font-size: 15px; color: var(--text-muted); line-height: 1.6;
+  }
+  .pain-stat {
+    margin-top: 12px;
+    display: inline-block;
+    background: rgba(113,76,154,0.1);
+    color: var(--purple);
+    font-weight: 700; font-size: 14px;
+    padding: 4px 12px; border-radius: 100px;
+  }
+
+  /* WHAT IS IT */
+  .what {
+    padding: 100px 40px;
+    background: linear-gradient(180deg, var(--darker) 0%, #2a1540 100%);
+    position: relative; overflow: hidden;
+  }
+  .what::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(113,76,154,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .what-inner {
+    max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .what .section-eyebrow { color: var(--purple-light); }
+  .what .section-heading { color: var(--white); }
+  .what .section-heading em { color: var(--gold-light); }
+  .what .section-sub { color: rgba(255,255,255,0.65); margin-bottom: 40px; }
+
+  .what-quote {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-left: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+  .what-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-style: italic;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+  }
+
+  .what-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .what-list li {
+    display: flex; gap: 14px; align-items: flex-start;
+    color: rgba(255,255,255,0.8); font-size: 16px;
+  }
+  .what-list-icon {
+    width: 28px; height: 28px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--purple), var(--blue-accent));
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; margin-top: 1px;
+  }
+
+  .what-right {
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .type-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px; padding: 20px 24px;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+  .type-card:hover {
+    background: rgba(113,76,154,0.2);
+    border-color: rgba(113,76,154,0.5);
+  }
+  .type-card-num {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+  }
+  .type-card h4 {
+    font-size: 16px; font-weight: 600; color: white; margin-bottom: 4px;
+  }
+  .type-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+  .what-cta { margin-top: 8px; }
+
+  /* STATS */
+  .stats {
+    background: var(--purple);
+    padding: 64px 40px;
+    position: relative; overflow: hidden;
+  }
+  .stats::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 120% at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 70%);
+  }
+  .stats-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 40px; position: relative; z-index: 1;
+    text-align: center;
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+  }
+  .stat-num span { color: var(--gold-light); }
+  .stat-label {
+    font-size: 14px; font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    margin-top: 8px;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 100px 40px;
+    background: var(--off-white);
+  }
+  .services-inner { max-width: 1200px; margin: 0 auto; }
+  .services-header {
+    text-align: center; margin-bottom: 64px;
+  }
+  .services-header .section-sub { margin: 0 auto; }
+
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px; padding: 40px 32px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .service-card:hover::before { opacity: 1; }
+  .service-card:nth-child(1)::before { background: linear-gradient(90deg, var(--purple), var(--purple-light)); }
+  .service-card:nth-child(2)::before { background: linear-gradient(90deg, var(--blue-accent), var(--purple-light)); }
+  .service-card:nth-child(3)::before { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+
+  .service-icon {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 24px;
+  }
+  .service-card:nth-child(1) .service-icon { background: rgba(113,76,154,0.1); }
+  .service-card:nth-child(2) .service-icon { background: rgba(84,60,223,0.1); }
+  .service-card:nth-child(3) .service-icon { background: rgba(212,168,67,0.1); }
+
+  .service-card h3 {
+    font-size: 21px; font-weight: 700; margin-bottom: 12px;
+    color: var(--text);
+  }
+  .service-card p {
+    font-size: 15px; color: var(--text-muted);
+    line-height: 1.65; margin-bottom: 24px;
+  }
+  .service-for {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;
+  }
+  .service-outcome {
+    font-size: 14px; font-weight: 500; color: var(--text);
+    background: var(--off-white); border-radius: 8px;
+    padding: 10px 14px; margin-bottom: 24px;
+  }
+  .service-link {
+    font-size: 14px; font-weight: 600; color: var(--purple);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+    transition: gap 0.2s;
+  }
+  .service-link:hover { gap: 10px; }
+
+  /* CONNIE SECTION */
+  .connie {
+    padding: 100px 40px;
+    background: var(--white);
+  }
+  .connie-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .connie-img-wrap { position: relative; }
+  .connie-img {
+    width: 100%; border-radius: 24px;
+    object-fit: cover; aspect-ratio: 4/5;
+    box-shadow: 0 20px 60px rgba(113,76,154,0.2);
+  }
+  .connie-badge {
+    position: absolute; bottom: -16px; right: -16px;
+    background: var(--purple);
+    color: white; border-radius: 16px;
+    padding: 20px 24px; text-align: center;
+    box-shadow: 0 8px 30px rgba(113,76,154,0.4);
+  }
+  .connie-badge strong { display: block; font-size: 36px; font-weight: 800; font-family: 'Playfair Display', serif; }
+  .connie-badge span { font-size: 13px; opacity: 0.85; }
+
+  .connie-content .section-eyebrow { margin-bottom: 8px; }
+  .connie-content .section-heading { margin-bottom: 20px; }
+
+  .connie-bio {
+    font-size: 16px; color: var(--text-muted); line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .cred-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
+  .cred-list li {
+    display: flex; gap: 12px; align-items: center;
+    font-size: 15px; color: var(--text); font-weight: 500;
+  }
+  .cred-list li::before {
+    content: '✓';
+    width: 24px; height: 24px; flex-shrink: 0;
+    background: rgba(113,76,154,0.1);
+    color: var(--purple); font-weight: 700; font-size: 12px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 100px 40px;
+    background: var(--off-white);
+  }
+  .testimonials-inner { max-width: 1200px; margin: 0 auto; }
+  .testimonials-header { text-align: center; margin-bottom: 64px; }
+  .testimonials-header .section-sub { margin: 0 auto; }
+
+  .testimonials-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .testimonial-featured {
+    grid-column: 1 / -1;
+    background: var(--purple);
+    border-radius: 20px; padding: 48px;
+    color: white; position: relative; overflow: hidden;
+  }
+  .testimonial-featured::before {
+    content: '"';
+    position: absolute; top: -20px; left: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 180px; font-weight: 900;
+    color: rgba(255,255,255,0.08); line-height: 1;
+    pointer-events: none;
+  }
+  .testimonial-featured p {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-style: italic;
+    line-height: 1.6; margin-bottom: 24px;
+    position: relative; z-index: 1;
+  }
+  .testimonial-featured-meta {
+    display: flex; align-items: center; gap: 16px;
+    position: relative; z-index: 1;
+  }
+  .testimonial-avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .testimonial-name { font-weight: 700; font-size: 16px; }
+  .testimonial-title { font-size: 13px; opacity: 0.75; }
+
+  .testimonial-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px;
+  }
+  .stars { color: var(--gold); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px; }
+  .testimonial-card p {
+    font-size: 15px; color: var(--text); line-height: 1.65;
+    margin-bottom: 20px; font-style: italic;
+  }
+  .testimonial-card-meta {
+    display: flex; align-items: center; gap: 12px;
+    border-top: 1px solid var(--border); padding-top: 16px;
+  }
+  .testimonial-card-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--purple-xlight);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .testimonial-card-name { font-weight: 600; font-size: 14px; color: var(--text); }
+  .testimonial-card-title { font-size: 13px; color: var(--text-muted); }
+
+  /* QUIZ SECTION */
+  .quiz {
+    padding: 80px 40px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+  }
+  .quiz-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: center;
+  }
+  .quiz-content .section-heading { margin-bottom: 16px; }
+  .quiz-content p {
+    font-size: 16px; color: var(--text-muted); line-height: 1.65; margin-bottom: 24px;
+  }
+  .quiz-benefits { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+  .quiz-benefits li {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 15px; color: var(--text);
+  }
+  .quiz-benefits li::before {
+    content: '→'; color: var(--purple); font-weight: 700; flex-shrink: 0;
+  }
+  .quiz-card {
+    background: linear-gradient(135deg, var(--darker), #2a1540);
+    border-radius: 20px; padding: 40px;
+    color: white; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .quiz-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(113,76,154,0.4) 0%, transparent 70%);
+  }
+  .quiz-card-inner { position: relative; z-index: 1; }
+  .quiz-emoji { font-size: 48px; margin-bottom: 16px; }
+  .quiz-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .quiz-card p { font-size: 15px; opacity: 0.75; margin-bottom: 28px; line-height: 1.5; }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--darker); border: none; cursor: pointer;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    padding: 14px 28px; border-radius: 10px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .quiz-note { font-size: 12px; opacity: 0.5; margin-top: 12px; }
+
+  /* FAQ */
+  .faq {
+    padding: 100px 40px;
+    background: var(--off-white);
+  }
+  .faq-inner {
+    max-width: 840px; margin: 0 auto;
+  }
+  .faq-header { text-align: center; margin-bottom: 56px; }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden;
+    margin-bottom: 12px;
+    background: var(--white);
+    transition: box-shadow 0.2s;
+  }
+  .faq-item:hover { box-shadow: 0 4px 20px rgba(113,76,154,0.1); }
+  .faq-btn {
+    width: 100%; text-align: left;
+    background: none; border: none; cursor: pointer;
+    padding: 22px 28px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: inherit; font-size: 16px; font-weight: 600;
+    color: var(--text);
+    gap: 20px;
+  }
+  .faq-btn:hover { color: var(--purple); }
+  .faq-icon {
+    width: 28px; height: 28px; flex-shrink: 0;
+    background: var(--off-white); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: var(--purple);
+    transition: transform 0.2s, background 0.2s;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--purple); color: white; }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s;
+    padding: 0 28px;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; padding: 0 28px 24px; }
+  .faq-answer p { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
+
+  /* FINAL CTA */
+  .cta-section {
+    padding: 100px 40px;
+    background: linear-gradient(135deg, var(--darker) 0%, #2a1540 100%);
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 100% at 50% 100%, rgba(113,76,154,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-inner {
+    max-width: 720px; margin: 0 auto;
+    text-align: center; position: relative; z-index: 1;
+  }
+  .cta-section .section-eyebrow { color: var(--purple-light); margin-bottom: 16px; }
+  .cta-section .section-heading {
+    color: var(--white); margin-bottom: 20px;
+  }
+  .cta-section .section-heading em { color: var(--gold-light); }
+  .cta-section p {
+    font-size: 17px; color: rgba(255,255,255,0.65);
+    line-height: 1.65; margin-bottom: 40px;
+  }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  .btn-white {
+    background: white; color: var(--purple); border: none; cursor: pointer;
+    font-family: inherit; font-size: 16px; font-weight: 700;
+    padding: 16px 32px; border-radius: 10px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    transition: transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+
+  .btn-outline-white {
+    background: transparent; color: white;
+    border: 2px solid rgba(255,255,255,0.4);
+    cursor: pointer; font-family: inherit; font-size: 16px; font-weight: 600;
+    padding: 14px 32px; border-radius: 10px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    transition: all 0.2s;
+  }
+  .btn-outline-white:hover {
+    border-color: white; background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+  }
+  .cta-note { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 20px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--darker);
+    padding: 64px 40px 32px;
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .footer-brand img { height: 40px; margin-bottom: 16px; filter: brightness(0) invert(1); }
+  .footer-brand p { font-size: 14px; line-height: 1.65; margin-bottom: 20px; }
+  .footer-socials { display: flex; gap: 12px; }
+  .footer-social {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; text-decoration: none; color: rgba(255,255,255,0.7);
+    transition: background 0.2s;
+  }
+  .footer-social:hover { background: var(--purple); color: white; }
+
+  .footer-col h6 {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a {
+    color: rgba(255,255,255,0.65); text-decoration: none;
+    font-size: 14px; transition: color 0.2s;
+  }
+  .footer-col a:hover { color: white; }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 32px auto 0;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  .footer-bottom a:hover { color: white; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * {
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge { animation-delay: 0.1s; }
+  .hero-headline { animation-delay: 0.2s; }
+  .hero-quote { animation-delay: 0.3s; }
+  .hero-sub { animation-delay: 0.35s; }
+  .hero-ctas { animation-delay: 0.45s; }
+  .hero-quiz-note { animation-delay: 0.5s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-img-wrap { display: none; }
+    .what-inner { grid-template-columns: 1fr; gap: 48px; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .connie-inner { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .quiz-inner { grid-template-columns: 1fr; }
+    .stats-inner { grid-template-columns: repeat(2,1fr); }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero-inner { padding: 60px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/06/logo.png" alt="Exceptional Sales">
+  </a>
+  <ul class="nav-links">
+    <li><a href="what-is-sales-call-reluctance.html">What is Call Reluctance?</a></li>
+    <li><a href="services-coaching.html">Coaching</a></li>
+    <li><a href="services-speaking.html">Speaking</a></li>
+    <li><a href="spq-gold-assessment.html">SPQ*Gold</a></li>
+    <li><a href="#">Insights</a></li>
+    <li><a href="contact-us.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="tel:6023805431" class="btn-ghost">📞 602-380-5431</a>
+    <a href="free-report-3.html" class="btn-primary">Take Free Quiz</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span></span>
+        25+ Years as the #1 Expert in Sales Call Reluctance
+      </div>
+      <h1 class="hero-headline">
+        Find Out Which of the<br>
+        <em>16 Types</em> Is Killing<br>
+        Your Pipeline
+      </h1>
+      <blockquote class="hero-quote">
+        "Sales Call Reluctance is nothing to be embarrassed about. Allowing it to persist needlessly is."
+      </blockquote>
+      <p class="hero-sub">
+        It's not laziness. It's psychology. Identify your specific barrier, name it, and walk through it — with the world's most recognized expert in prospecting behavior.
+      </p>
+      <div class="hero-ctas">
+        <a href="free-report-3.html" class="btn-primary-lg">
+          Discover My Type &rarr;
+        </a>
+        <a href="sales-coach.html" class="btn-outline-lg">
+          Meet Connie
+        </a>
+      </div>
+      <p class="hero-quiz-note">Free 4-minute quiz. No email required to see your result.</p>
+    </div>
+    <div class="hero-img-wrap">
+      <img
+        src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/connie-min-1.png"
+        alt="Connie Kadansky — Sales Call Reluctance Expert"
+        class="hero-img"
+      >
+      <div class="hero-cred hero-cred-top">
+        <strong>MCC</strong>
+        Master Certified Coach
+      </div>
+      <div class="hero-cred hero-cred-bottom">
+        <strong>1,200+</strong>
+        Salespeople Transformed
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED IN -->
+<div class="featured-bar">
+  <div class="featured-inner">
+    <span class="featured-label">As Seen In</span>
+    <div class="featured-logos">
+      <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/featured_04.png" alt="">
+      <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/featured_01.webp" alt="">
+      <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/featured_02.webp" alt="">
+      <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/featured_03.webp" alt="">
+      <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/featured_05.webp" alt="">
+      <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/featured_16.webp" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- PAIN SECTION -->
+<section class="pain">
+  <div class="pain-inner">
+    <div class="section-eyebrow">The Hidden Problem</div>
+    <h2 class="section-heading">You Have the Skills.<br>Something Else Is in the Way.</h2>
+    <p class="section-sub">80% of salespeople never reach their true pipeline potential — not from lack of skill, but from psychological barriers they can't even name.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">🧠</div>
+        <h3>It's Not Laziness or Lack of Motivation</h3>
+        <p>You know what you should do. You have the training. Yet something holds you back the moment it's time to pick up the phone or send the outreach. That gap is psychological — and it has a name.</p>
+        <span class="pain-stat">Affects 4 in 5 salespeople</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🎭</div>
+        <h3>Sales Asks You to Be Visible Every Day</h3>
+        <p>Salespeople are daily public performers. Every call, every follow-up stirs up self-judgment, fear of evaluation, and perceived social risk. Initiating triggers evolutionary discomfort.</p>
+        <span class="pain-stat">Evolutionary, not personal</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🔍</div>
+        <h3>16 Distinct Types — One Generic Fix Won't Work</h3>
+        <p>From role rejection and hyper-professionalism to yielder reluctance and emotional inhibition — each type is different, and each requires a targeted intervention. Guessing costs you quota.</p>
+        <span class="pain-stat">16 clinically-identified types</span>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📉</div>
+        <h3>Most Sales Coaching Misses the Root Cause</h3>
+        <p>Standard coaching addresses technique. But if the block is psychological — identity conflict, fear of visibility, self-image threat — technique training won't fix it. You need a prospecting EKG, not another script.</p>
+        <span class="pain-stat">The #1 misdiagnosed sales problem</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS IT -->
+<section class="what">
+  <div class="what-inner">
+    <div class="what-left">
+      <div class="section-eyebrow">The Science</div>
+      <h2 class="section-heading">It's Not Who You Are.<br>It's What You <em>Believe</em><br>About Who You Are.</h2>
+      <p class="section-sub">Sales Call Reluctance is an emotional hesitation to prospect and promote — despite having the skills, knowledge, and incentives to do so.</p>
+      <div class="what-quote">
+        <p>"Sales isn't about what we do — it's about who we believe we are when we do it."</p>
+      </div>
+      <ul class="what-list">
+        <li>
+          <div class="what-list-icon">⚡</div>
+          Fear-based emotional response to prospecting activities
+        </li>
+        <li>
+          <div class="what-list-icon">🔒</div>
+          Deep-seated assumptions about visibility and "selling"
+        </li>
+        <li>
+          <div class="what-list-icon">🪞</div>
+          Identity conflict when outreach threatens your self-image
+        </li>
+        <li>
+          <div class="what-list-icon">🎯</div>
+          16 distinct types — each requiring its own specific intervention
+        </li>
+      </ul>
+      <div class="what-cta" style="margin-top: 36px;">
+        <a href="what-is-sales-call-reluctance.html" class="btn-primary-lg">Learn About All 16 Types &rarr;</a>
+      </div>
+    </div>
+    <div class="what-right">
+      <div class="type-card">
+        <div class="type-card-num">Type 01 — Role Rejection</div>
+        <h4>Ashamed to Be in Sales</h4>
+        <p>Secretly embarrassed by the profession. Avoids identifying as a salesperson even when that's the job.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-card-num">Type 02 — Hyper-Pro</div>
+        <h4>Too Professional to Prospect</h4>
+        <p>Spends too much time perfecting presentations and proposals. Uses polish as a proxy for prospecting.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-card-num">Type 03 — Stage Fright</div>
+        <h4>Group Prospecting Paralysis</h4>
+        <p>Freezes up in networking events, webinars, or speaking settings. One-on-one is fine; groups shut them down.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-card-num">Type 04 — Yielder</div>
+        <h4>Can't Handle "No"</h4>
+        <p>Backs off too quickly to avoid conflict. Prioritizes being liked over being persistent. Leaves deals on the table.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-card-num">Type 05–16 & More</div>
+        <h4>+ 12 Additional Types</h4>
+        <p>From Socially Self-Conscious to Emotionally Unemancipated. Take the quiz to find yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">25<span>+</span></div>
+      <div class="stat-label">Years of Specialized Expertise</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">1,200<span>+</span></div>
+      <div class="stat-label">Salespeople Transformed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">Fortune<span> 500</span></div>
+      <div class="stat-label">Companies Served</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">16</div>
+      <div class="stat-label">Types. One Diagnostic. Zero Guessing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <div class="section-eyebrow">How We Work Together</div>
+      <h2 class="section-heading">The Right Path for Your Situation</h2>
+      <p class="section-sub">Whether you're an individual rep, a sales manager, or a conference organizer — there's a specific way Connie can help you move the needle on prospecting.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <div class="service-for">For Individual Salespeople</div>
+        <h3>1-on-1 Coaching</h3>
+        <p>Identify your exact type of Call Reluctance using the SPQ*Gold assessment, then work through a targeted behavioral intervention designed specifically for how your reluctance shows up.</p>
+        <div class="service-outcome">Result: More outbound calls, more pipeline, more closes — without fighting yourself every day.</div>
+        <a href="services-coaching.html" class="service-link">Start Coaching &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <div class="service-for">For Sales Teams &amp; Managers</div>
+        <h3>Team Workshops</h3>
+        <p>Bring Connie in to assess and address Call Reluctance across your entire team. Includes group SPQ*Gold diagnostics, facilitated workshops, and manager coaching guides for sustained follow-through.</p>
+        <div class="service-outcome">Result: Measurable lift in team prospecting activity within 30 days.</div>
+        <a href="services-speaking.html" class="service-link">Book a Workshop &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎤</div>
+        <div class="service-for">For Conferences &amp; Events</div>
+        <h3>Keynote Speaking</h3>
+        <p>A proven, high-engagement keynote that reframes how sales professionals think about prospecting. Combines behavioral science, real case studies, and actionable frameworks audiences can use the same week.</p>
+        <div class="service-outcome">Result: Audiences leave with a new lens on their own pipeline behavior.</div>
+        <a href="services-speaking.html" class="service-link">Book Connie &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNIE -->
+<section class="connie">
+  <div class="connie-inner">
+    <div class="connie-img-wrap">
+      <img
+        src="https://www.exceptionalsales.com/wp-content/uploads/2025/12/connie-min-1.png"
+        alt="Connie Kadansky"
+        class="connie-img"
+      >
+      <div class="connie-badge">
+        <strong>MCC</strong>
+        <span>Master Certified Coach</span>
+      </div>
+    </div>
+    <div class="connie-content">
+      <div class="section-eyebrow">About Connie</div>
+      <h2 class="section-heading">The World's Foremost<br>Authority on <em>Sales Call Reluctance</em></h2>
+      <p class="connie-bio">
+        Connie Kadansky has spent 25+ years doing one thing: helping salespeople and sales teams identify and overcome the psychological barriers that keep them from prospecting consistently. Not motivation speeches. Not technique training. The actual root cause.
+      </p>
+      <p class="connie-bio">
+        Her clients include Fortune 500 sales teams, independent reps rebuilding their pipeline, and sales managers who finally want to understand why their best people still avoid the phone.
+      </p>
+      <ul class="cred-list">
+        <li>Master Certified Coach (MCC) — International Coach Federation</li>
+        <li>Certified SPQ*Gold administrator and interpreter</li>
+        <li>Featured in Wall Street Journal, Forbes, Arizona Republic, The Wealth Channel</li>
+        <li>Speaker at national sales conferences and corporate leadership events</li>
+        <li>Based in Phoenix, AZ — works with clients globally</li>
+      </ul>
+      <a href="sales-coach.html" class="btn-primary-lg">Read Connie's Full Story &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <div class="section-eyebrow">Client Results</div>
+      <h2 class="section-heading">What Happens When You<br><em>Stop Guessing</em> and Start Coaching</h2>
+      <p class="section-sub">Real results from salespeople and sales managers who worked with Connie to address the root cause — not the symptoms.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-featured">
+        <p>"Working with Connie fundamentally changed how I think about prospecting. Before, I had every excuse in the book for why I didn't make calls. She helped me realize it wasn't laziness — it was a specific type of Call Reluctance that had nothing to do with my talent. Three months later, my pipeline is the fullest it's been in two years."</p>
+        <div class="testimonial-featured-meta">
+          <div class="testimonial-avatar">👤</div>
+          <div>
+            <div class="testimonial-name">Senior Account Executive</div>
+            <div class="testimonial-title">Financial Services, Phoenix AZ</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"I brought Connie in for a team workshop. Within a week, call volume was up 40%. The SPQ*Gold gave us language to talk about what was actually happening — not just 'you need to make more calls.'"</p>
+        <div class="testimonial-card-meta">
+          <div class="testimonial-card-avatar">💼</div>
+          <div>
+            <div class="testimonial-card-name">VP of Sales</div>
+            <div class="testimonial-card-title">SaaS company, 22-person team</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The quiz alone was eye-opening. I'm a 'Hyper-Pro' — I've been hiding behind perfect proposals instead of picking up the phone. That one insight was worth more than six months of regular sales coaching."</p>
+        <div class="testimonial-card-meta">
+          <div class="testimonial-card-avatar">🏆</div>
+          <div>
+            <div class="testimonial-card-name">Independent Insurance Agent</div>
+            <div class="testimonial-card-title">3-year client</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ SECTION -->
+<section class="quiz">
+  <div class="quiz-inner">
+    <div class="quiz-content">
+      <div class="section-eyebrow">Free Diagnostic</div>
+      <h2 class="section-heading">Take the <em>Free Quiz</em></h2>
+      <p>In 4 minutes, find out which of the 16 types of Sales Call Reluctance is creating friction in your pipeline — and what to do about it.</p>
+      <ul class="quiz-benefits">
+        <li>Identify your specific type of reluctance (not a general score)</li>
+        <li>Understand the psychology behind why you avoid prospecting</li>
+        <li>Get a personalized starting point for overcoming it</li>
+        <li>No credit card. No sales pressure.</li>
+      </ul>
+      <a href="free-report-3.html" class="btn-primary-lg">Get My Free Report &rarr;</a>
+    </div>
+    <div class="quiz-card">
+      <div class="quiz-card-inner">
+        <div class="quiz-emoji">🧬</div>
+        <h3>Your Prospecting EKG</h3>
+        <p>Think of it as a diagnostic scan for your prospecting behavior — showing exactly where the friction lives so you stop guessing and start changing.</p>
+        <a href="free-report-3.html" class="btn-gold">Start Free Quiz &rarr;</a>
+        <p class="quiz-note">Takes 4 minutes. Instant results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <div class="section-eyebrow">Common Questions</div>
+      <h2 class="section-heading">Everything You Need to Know</h2>
+      <p class="section-sub" style="margin: 0 auto;">Straight answers about Sales Call Reluctance, the SPQ*Gold assessment, and how Connie works.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        Why is Call Reluctance so common in sales?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Because sales isn't about what we <em>do</em> — it's about who we believe we <em>are</em> when we do it. Salespeople are daily public performers, which stirs up self-judgment, fear of evaluation, and perceived social risk. Initiating with strangers triggers evolutionary discomfort that has nothing to do with ability or motivation.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        What does the SPQ*Gold assessment measure?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>It measures 16 distinct types of Sales Call Reluctance — from role rejection and emotional inhibition to yielder reluctance and hyper-professionalism. It's not a personality test. It's a behavioral diagnostic tool designed for action. Think of it as a prospecting EKG: it shows where the friction lives so you stop guessing and start changing.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        How do companies use SPQ*Gold in hiring?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Smart companies use it as a predictor of prospecting <em>behavior</em>, not potential. They want to know: will this person lean into outreach, or subtly avoid it day after day? It's not about screening people <em>out</em> — it's about setting them <em>up</em>. You can coach from day one if you know where someone hesitates.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        What's the secret to getting prospects to call back?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Speak to their value gap — not your product. Curiosity is the magnet. Leave a message that opens a loop: "Hey Sarah, I noticed something that might be costing you a lot of time — happy to share if it's helpful." Now you're a resource, not a rep.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        How does Connie help salespeople actually push past reluctance?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>By helping them name it, claim it, and face it behaviorally — not just intellectually. Progress is made one outbound action at a time. We don't talk people out of reluctance. We walk them through it — with insight, support, and small wins stacked daily.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFaq(this)">
+        Who is this for — individual salespeople or managers?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Both. Individual salespeople work with Connie one-on-one to identify and overcome their specific type of reluctance. Sales managers and companies bring Connie in for team assessments and workshops. If you're losing pipeline to avoidance — at any level — this applies to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="section-eyebrow">Ready to Move Forward</div>
+    <h2 class="section-heading">Stop Letting Reluctance <em>Cost You Quota</em></h2>
+    <p>Take 4 minutes to find your type — or book a 30-minute call with Connie to discuss what this looks like for your situation. Either way, you leave with clarity.</p>
+    <div class="cta-actions">
+      <a href="free-report-3.html" class="btn-white">Take the Free Quiz &rarr;</a>
+      <a href="contact-us.html" class="btn-outline-white">Book a Consultation</a>
+    </div>
+    <p class="cta-note">Free quiz takes 4 minutes. No credit card. No pressure.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://www.exceptionalsales.com/wp-content/uploads/2025/06/logo.png" alt="Exceptional Sales">
+      <p>Helping sales professionals and teams overcome the psychological barriers to prospecting success for over 25 years. Master Certified Coach specializing in Sales Call Reluctance.</p>
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/@SalesCallReluctanceCoach" class="footer-social" title="YouTube">▶</a>
+        <a href="https://www.facebook.com/ExceptionalSalesPerformance" class="footer-social" title="Facebook">f</a>
+        <a href="https://www.linkedin.com/in/conniekadansky/" class="footer-social" title="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h6>For Salespeople</h6>
+      <ul>
+        <li><a href="free-report-3.html">Free Quiz</a></li>
+        <li><a href="spq-gold-assessment.html">SPQ*Gold Assessment</a></li>
+        <li><a href="services-coaching.html">1-on-1 Coaching</a></li>
+        <li><a href="#">Mental Fitness</a></li>
+        <li><a href="#">Sales Negotiation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>For Managers</h6>
+      <ul>
+        <li><a href="services-speaking.html">Team Solutions</a></li>
+        <li><a href="services-speaking.html">Workshops</a></li>
+        <li><a href="services-speaking.html">Keynote Speaking</a></li>
+        <li><a href="#">Client Results</a></li>
+        <li><a href="#">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>Contact</h6>
+      <ul>
+        <li><a href="/cdn-cgi/l/email-protection#a8cbc7c6c6c1cde8cdd0cbcdd8dcc1c7c6c9c4dbc9c4cddb86cbc7c5"><span class="__cf_email__" data-cfemail="23404c4d4d4a4663465b404653574a4c4d424f50424f46500d404c4e">[email&#160;protected]</span></a></li>
+        <li><a href="tel:6023805431">602-380-5431</a></li>
+        <li style="color: rgba(255,255,255,0.4); font-size: 13px;">8724 N. 6th Drive<br>Phoenix, AZ 85021</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Exceptional Sales Performance. All rights reserved.</span>
+    <div style="display: flex; gap: 20px;">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/sitemap/">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Scroll-triggered fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.pain-card, .servi
