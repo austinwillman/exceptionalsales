@@ -8,6 +8,60 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="shared.css">
+<style>
+/* ── MOBILE GRID OVERRIDES ── */
+@media(max-width:768px){
+  /* All inline-grid sections collapse to single column */
+  section > div[style*="grid-template-columns"],
+  section > div > div[style*="grid-template-columns"]{
+    display:block !important;
+  }
+  section > div[style*="grid-template-columns"] > *,
+  section > div > div[style*="grid-template-columns"] > *{
+    width:100% !important;
+    margin-bottom:24px;
+  }
+  /* Section padding */
+  section[style*="padding:100px 40px"],
+  section[style*="padding: 100px 40px"]{
+    padding:56px 20px !important;
+  }
+  section[style*="padding:80px 40px"],
+  section[style*="padding: 80px 40px"]{
+    padding:48px 20px !important;
+  }
+  /* Image sizing */
+  section img[style*="width:100%"]{
+    max-height:280px;
+    object-fit:cover;
+  }
+  /* Stat grids */
+  div[style*="grid-template-columns:repeat(4"]{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:16px !important;
+  }
+  div[style*="grid-template-columns:repeat(3"]{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+  div[style*="grid-template-columns:1fr 1fr"]{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+  /* Fix form grid (name fields side by side) */
+  div[style*="grid-template-columns:1fr 1fr"][style*="gap:16px"]{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+  }
+  /* Prevent horizontal scroll */
+  body{ overflow-x:hidden; }
+  .page-hero-ctas{ flex-direction:column; gap:12px; }
+  .page-hero-ctas a{ width:100%; justify-content:center; text-align:center; }
+}
+</style>
 </head>
 <body>
 <nav>
@@ -26,7 +80,21 @@
     <a href="tel:6023805431" class="btn-ghost">📞 602-380-5431</a>
     <a href="free-report-3.html" class="active" class="btn-primary">Take Free Quiz</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="what-is-sales-call-reluctance.html">What is Call Reluctance?</a>
+  <a href="sales-coach.html">Sales Coach</a>
+  <a href="services-coaching.html">Coaching</a>
+  <a href="services-speaking.html">Speaking</a>
+  <a href="spq-gold-assessment.html">SPQ*Gold</a>
+  <a href="contact-us.html">Contact</a>
+  <a href="free-report-3.html" class="mobile-cta">Take Free Quiz →</a>
+</div>
 
 <section class="page-hero">
   <div class="page-hero-inner">
@@ -130,7 +198,7 @@
     <div class="footer-col">
       <h6>Contact</h6>
       <ul>
-        <li><a href="mailto:connie@exceptionalsales.com">connie@exceptionalsales.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#ed8e8283838488ad88958e889d998482838c819e8c81889ec38e8280"><span class="__cf_email__" data-cfemail="23404c4d4d4a4663465b404653574a4c4d424f50424f46500d404c4e">[email&#160;protected]</span></a></li>
         <li><a href="tel:6023805431">602-380-5431</a></li>
         <li style="color:rgba(255,255,255,.4);font-size:13px;line-height:1.5;">8724 N. 6th Drive<br>Phoenix, AZ 85021</li>
       </ul>
@@ -144,17 +212,9 @@
     </div>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleFaq(btn){
   const item=btn.closest('.faq-item');
   const isOpen=item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-  if(!isOpen)item.classList.add('open');
-}
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-},{threshold:0.08});
-document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
-</script>
-</body>
-</html>
+  if(!isOpen)item.classList.add('
