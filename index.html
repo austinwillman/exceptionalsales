@@ -837,6 +837,26 @@
     .nav-links { display: none; }
     .hero-inner { padding: 60px 20px; }
   }
+
+  /* ── HAMBURGER ── */
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:300}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .25s ease}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  .mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(255,255,255,0.98);border-bottom:2px solid rgba(113,76,154,0.15);backdrop-filter:blur(16px);z-index:199;padding:16px 24px 28px;flex-direction:column;gap:0;box-shadow:0 8px 32px rgba(113,76,154,.12)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{color:#2d2040;text-decoration:none;font-size:16px;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(113,76,154,0.12);transition:color .2s}
+  .mobile-menu a:last-child{border-bottom:none}
+  .mobile-menu a:hover{color:#714c9a}
+  .mobile-menu .mobile-cta{margin-top:16px;background:#714c9a;color:white;text-align:center;padding:14px;border-radius:10px;font-weight:700;font-size:15px;border-bottom:none;display:block}
+  .mobile-menu .mobile-cta:hover{background:#5a3a7e}
+
+  @media(max-width:768px){
+    .nav-actions{display:none}
+    .hamburger{display:flex}
+  }
 </style>
 </head>
 <body>
@@ -858,7 +878,21 @@
     <a href="tel:6023805431" class="btn-ghost">📞 602-380-5431</a>
     <a href="free-report-3.html" class="btn-primary">Take Free Quiz</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="what-is-sales-call-reluctance.html">What is Call Reluctance?</a>
+  <a href="sales-coach.html">Sales Coach</a>
+  <a href="services-coaching.html">Coaching</a>
+  <a href="services-speaking.html">Speaking</a>
+  <a href="spq-gold-assessment.html">SPQ*Gold</a>
+  <a href="contact-us.html">Contact</a>
+  <a href="free-report-3.html" class="mobile-cta">Take Free Quiz →</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
