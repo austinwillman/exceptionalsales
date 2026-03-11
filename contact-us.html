@@ -62,37 +62,58 @@
   .page-hero-ctas a{ width:100%; justify-content:center; text-align:center; }
 }
 </style>
+
 <script>
-function toggleMenu(){
-  var m=document.getElementById('mobileMenu');
-  var b=document.getElementById('hamburger');
-  if(!m||!b)return;
-  m.classList.toggle('open');
-  b.classList.toggle('open');
-}
-function toggleFaq(btn){
-  var item=btn.closest('.faq-item');
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
-  if(!isOpen)item.classList.add('open');
-}
-window.addEventListener('load',function(){
-  document.querySelectorAll('.mobile-menu a').forEach(function(a){
-    a.addEventListener('click',function(){
-      var m=document.getElementById('mobileMenu');
-      var b=document.getElementById('hamburger');
-      if(m)m.classList.remove('open');
-      if(b)b.classList.remove('open');
+(function(){
+  function initNav(){
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('mobileMenu');
+    if(!btn || !menu) return;
+
+    function toggle(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('open');
+      if(isOpen){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      } else {
+        menu.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    btn.addEventListener('touchend', toggle, {passive: false});
+    btn.addEventListener('click', toggle);
+
+    // Close when a menu link is tapped
+    var links = menu.querySelectorAll('a');
+    links.forEach(function(a){
+      a.addEventListener('touchend', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      });
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      });
     });
-  });
-  // Scroll reveal
-  if('IntersectionObserver' in window){
-    var obs=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
-    },{threshold:0.1});
-    document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});
+
+    // Close on outside tap
+    document.addEventListener('touchend', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      }
+    });
   }
-});
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();
 </script>
 </head>
 <body>
@@ -112,7 +133,7 @@ window.addEventListener('load',function(){
     <a href="tel:6023805431" class="btn-ghost">📞 602-380-5431</a>
     <a href="free-report-3.html" class="btn-primary">Take Free Quiz</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+  <button class="hamburger" id="hamburger" aria-label="Open menu" >
     <span></span><span></span><span></span>
   </button>
 </nav>
