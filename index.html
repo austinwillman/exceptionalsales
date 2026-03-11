@@ -858,6 +858,58 @@
     .hamburger{display:flex}
   }
 </style>
+<script>
+(function(){
+  function initNav(){
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('mobileMenu');
+    if(!btn || !menu) return;
+
+    function toggle(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('open');
+      if(isOpen){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      } else {
+        menu.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    btn.addEventListener('touchend', toggle, {passive: false});
+    btn.addEventListener('click', toggle);
+
+    // Close when a menu link is tapped
+    var links = menu.querySelectorAll('a');
+    links.forEach(function(a){
+      a.addEventListener('touchend', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      });
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      });
+    });
+
+    // Close on outside tap
+    document.addEventListener('touchend', function(e){
+      if(!btn.contains(e.target) && !menu.contains(e.target)){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+      }
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();
+</script>
 </head>
 <body>
 
@@ -878,7 +930,7 @@
     <a href="tel:6023805431" class="btn-ghost">📞 602-380-5431</a>
     <a href="free-report-3.html" class="btn-primary">Take Free Quiz</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+  <button class="hamburger" id="hamburger" aria-label="Open menu" >
     <span></span><span></span><span></span>
   </button>
 </nav>
