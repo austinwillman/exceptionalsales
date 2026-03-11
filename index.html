@@ -865,7 +865,7 @@
     var menu = document.getElementById('mobileMenu');
     if(!btn || !menu) return;
 
-    function toggle(e){
+    function openMenu(e){
       e.preventDefault();
       e.stopPropagation();
       var isOpen = menu.classList.contains('open');
@@ -878,29 +878,16 @@
       }
     }
 
-    btn.addEventListener('touchend', toggle, {passive: false});
-    btn.addEventListener('click', toggle);
+    btn.addEventListener('touchend', openMenu, {passive: false});
+    btn.addEventListener('click', openMenu);
 
-    // Close when a menu link is tapped
-    var links = menu.querySelectorAll('a');
-    links.forEach(function(a){
-      a.addEventListener('touchend', function(){
-        menu.classList.remove('open');
-        btn.classList.remove('open');
-      });
-      a.addEventListener('click', function(){
-        menu.classList.remove('open');
-        btn.classList.remove('open');
-      });
-    });
-
-    // Close on outside tap
-    document.addEventListener('touchend', function(e){
-      if(!btn.contains(e.target) && !menu.contains(e.target)){
+    // Close menu on outside tap - do NOT intercept link taps
+    document.addEventListener('touchstart', function(e){
+      if(menu.classList.contains('open') && !btn.contains(e.target) && !menu.contains(e.target)){
         menu.classList.remove('open');
         btn.classList.remove('open');
       }
-    });
+    }, {passive: true});
   }
 
   if(document.readyState === 'loading'){
